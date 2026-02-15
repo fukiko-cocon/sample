@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03 - 学習ダッシュボード | design.pen</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; background: #E8F5E9; }
+      .screen-03 {
+        width: 1440px;
+        min-height: 992px;
+        margin: 0 auto;
+        background: #E8F5E9;
+        padding: 48px 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        font-family: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif;
+      }
+      .header { display: flex; align-items: center; height: 64px; }
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #2E7D32;
+        margin: 0;
+      }
+      .cards-row {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .card {
+        width: 280px;
+        height: 120px;
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      }
+      .card-label { font-size: 14px; color: #558B2F; font-weight: 500; }
+      .card-value { font-size: 32px; font-weight: 700; }
+      .card-value.green { color: #2E7D32; }
+      .card-value.orange { color: #FF9800; }
+      .card-value.blue { color: #1976D2; }
+      .section-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1B5E20;
+        margin: 0 0 8px 0;
+      }
+      .progress-row { display: flex; gap: 16px; flex-wrap: wrap; }
+      .subject-card {
+        width: 320px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      }
+      .subject-name { font-size: 16px; font-weight: 600; color: #333; margin: 0; }
+      .progress-bar {
+        width: 100%;
+        height: 12px;
+        background: #C8E6C9;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .progress-fill {
+        height: 100%;
+        border-radius: 6px;
+        background: #66BB6A;
+      }
+      .progress-fill.frac-75 { width: 75%; }
+      .progress-fill.frac-50 { width: 50%; }
+      .recent-list {
+        width: 600px;
+        max-width: 100%;
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      }
+      .recent-item { font-size: 15px; color: #424242; margin: 0; }
+      .design-badge {
+        position: fixed; top: 8px; right: 8px; z-index: 9999;
+        padding: 6px 12px; font-size: 12px; background: #2E7D32; color: #fff;
+        border-radius: 12px; font-family: sans-serif;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="design-badge" aria-hidden="true">03 (ダッシュボード)</div>
+    <div class="screen-03" role="main">
+      <header class="header">
+        <h1 class="title">わたしの学習ダッシュボード</h1>
+      </header>
+
+      <div class="cards-row">
+        <div class="card">
+          <span class="card-label">今週の学習</span>
+          <span class="card-value green">5時間</span>
+        </div>
+        <div class="card">
+          <span class="card-label">がんばりポイント</span>
+          <span class="card-value orange">120 pt</span>
+        </div>
+        <div class="card">
+          <span class="card-label">れんぞく日数</span>
+          <span class="card-value blue">7日</span>
+        </div>
+      </div>
+
+      <section>
+        <h2 class="section-title">きょうやること</h2>
+        <div class="progress-row">
+          <div class="subject-card">
+            <p class="subject-name">こくご</p>
+            <div class="progress-bar">
+              <div class="progress-fill frac-75" role="presentation"></div>
+            </div>
+          </div>
+          <div class="subject-card">
+            <p class="subject-name">さんすう</p>
+            <div class="progress-bar">
+              <div class="progress-fill frac-50" role="presentation"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">きのうやったこと</h2>
+        <div class="recent-list">
+          <p class="recent-item">こくご：かんじのれんしゅう</p>
+          <p class="recent-item">さんすう：たしざん</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -4,64 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <title>01 - ログイン | design.pen</title>
+    <title>01 - ログイン（こどもむけ） | design.pen</title>
     <style>
       * { box-sizing: border-box; }
-      body { margin: 0; min-height: 100vh; background: #FFFFFF; }
+      body { margin: 0; min-height: 100vh; background: #FFF5E6; }
       .screen-01 {
         width: 1440px;
         min-height: 992px;
         margin: 0 auto;
-        background: #FFFFFF;
+        background: #FFF5E6;
         padding: 60px 0 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        gap: 28px;
+        font-family: "Nico Moji", "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif;
       }
       .title {
-        font-size: 32px;
+        font-size: 36px;
         font-weight: 700;
-        color: #000000;
+        color: #E65100;
         margin: 0;
+        letter-spacing: 0.02em;
       }
       .form-group {
-        width: 274px;
+        width: 300px;
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 8px;
       }
       .form-group label {
-        font-size: 14px;
-        font-weight: 500;
-        color: #0a0a0a;
+        font-size: 16px;
+        font-weight: 700;
+        color: #BF360C;
       }
       .form-group input,
       .form-group .select-trigger {
         width: 100%;
-        height: 40px;
-        padding: 10px 12px;
-        font-size: 14px;
-        border: 1px solid #e5e5e5;
-        border-radius: 6px;
-        background: #fafafa;
-        color: #0a0a0a;
+        height: 48px;
+        padding: 12px 16px;
+        font-size: 16px;
+        border: 2px solid #FFCC80;
+        border-radius: 16px;
+        background: #FFFFFF;
+        color: #333;
       }
-      .form-group input::placeholder { color: #737373; }
+      .form-group input:focus,
+      .form-group .select-trigger:focus {
+        outline: none;
+        border-color: #FF9800;
+        box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
+      }
+      .form-group input::placeholder { color: #FFB74D; }
       .select-trigger {
         display: flex;
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
       }
-      .select-trigger .placeholder { color: #737373; }
+      .select-trigger .placeholder { color: #FFB74D; }
       .select-trigger .chevron {
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
         flex-shrink: 0;
-        border-left: 2px solid #0a0a0a;
-        border-bottom: 2px solid #0a0a0a;
+        border-left: 3px solid #E65100;
+        border-bottom: 3px solid #E65100;
         transform: rotate(-45deg);
         margin-left: 8px;
       }
@@ -69,77 +76,85 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 6px;
-        height: 40px;
-        padding: 8px 24px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #fafafa;
-        background: #171717;
+        gap: 8px;
+        height: 52px;
+        padding: 12px 32px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        background: #FF9800;
         border: none;
-        border-radius: 6px;
+        border-radius: 16px;
         cursor: pointer;
+        box-shadow: 0 4px 0 #E65100;
       }
-      .btn:hover { background: #262626; }
+      .btn:hover { background: #FB8C00; }
+      .btn:active { box-shadow: 0 2px 0 #E65100; transform: translateY(2px); }
       .btn .icon-plus {
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
         position: relative;
       }
       .btn .icon-plus::before,
       .btn .icon-plus::after {
         content: "";
         position: absolute;
-        background: #fafafa;
+        background: #fff;
       }
       .btn .icon-plus::before {
-        width: 12px;
-        height: 2px;
+        width: 14px;
+        height: 3px;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        border-radius: 2px;
       }
       .btn .icon-plus::after {
-        width: 2px;
-        height: 12px;
+        width: 3px;
+        height: 14px;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        border-radius: 2px;
       }
       .circle {
         width: 328px;
         height: 328px;
         border-radius: 50%;
-        background: #298f71;
+        background: #FFB74D;
+        box-shadow: 0 8px 24px rgba(255, 152, 0, 0.25);
       }
       .design-badge {
         position: fixed; top: 8px; right: 8px; z-index: 9999;
-        padding: 4px 8px; font-size: 11px; background: #298f71; color: #fff;
-        border-radius: 4px; font-family: sans-serif;
+        padding: 6px 12px; font-size: 12px; background: #FF9800; color: #fff;
+        border-radius: 12px; font-family: sans-serif;
       }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="design-badge" aria-hidden="true">01 (design.pen)</div>
+    <div class="design-badge" aria-hidden="true">01 (こどもむけ)</div>
     <div class="screen-01" role="main">
       <h1 class="title">ログイン</h1>
 
       <div class="form-group">
-        <label>Label Text</label>
+        <label>なまえをえらんでね</label>
         <div class="select-trigger">
-          <span class="placeholder">Select Option</span>
+          <span class="placeholder">えらぶ</span>
           <span class="chevron" aria-hidden="true"></span>
         </div>
       </div>
 
       <div class="form-group">
-        <label>Label Text</label>
-        <input type="text" placeholder="Placeholder" />
+        <label>にゅうりょくしてね</label>
+        <input type="text" placeholder="ここにかいてね" />
       </div>
 
       <button type="button" class="btn">
         <span class="icon-plus" aria-hidden="true"></span>
-        Button
+        けってい
       </button>
 
       <div class="circle" aria-hidden="true"></div>
