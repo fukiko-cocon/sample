@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:design": "node -e \"console.log('\\n>>> デザイン確認用: このプロジェクト(2026test)から起動しています <<<\\n')\" && vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
