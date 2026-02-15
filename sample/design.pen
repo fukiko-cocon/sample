@@ -10,9 +10,9 @@
       "clip": true,
       "width": 1440,
       "height": 992,
-      "fill": "#FFFFFF",
+      "fill": "#FFF5E6",
       "layout": "vertical",
-      "gap": 20,
+      "gap": 28,
       "padding": [
         60,
         0,
@@ -24,10 +24,10 @@
         {
           "type": "text",
           "id": "lf2v8",
-          "fill": "#000000",
+          "fill": "#E65100",
           "content": "ログイン",
           "fontFamily": "Inter",
-          "fontSize": 32,
+          "fontSize": 36,
           "fontWeight": "700"
         },
         {
@@ -262,7 +262,7 @@
         {
           "type": "ellipse",
           "id": "oANVW",
-          "fill": "#298f71ff",
+          "fill": "#FFB74D",
           "width": 328,
           "height": 328
         }
@@ -324,6 +324,306 @@
           "fill": "#8f2980ff",
           "width": 328,
           "height": 328
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "2GZIR",
+      "x": 2075,
+      "y": -1460,
+      "name": "03",
+      "width": 1440,
+      "height": 992,
+      "fill": "#E8F5E9",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        48,
+        64
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "0f20L",
+          "name": "header03",
+          "width": "fill_container",
+          "height": 64,
+          "children": [
+            {
+              "type": "text",
+              "id": "NUf0i",
+              "name": "title03",
+              "fill": "#2E7D32",
+              "content": "わたしの学習ダッシュボード",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TUZhm",
+          "name": "cardsRow",
+          "width": "fill_container",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Z1QM7",
+              "name": "card1",
+              "width": 280,
+              "height": 120,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Btroy",
+                  "name": "card1Label",
+                  "fill": "#558B2F",
+                  "content": "今週の学習",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "oXQ2u",
+                  "name": "card1Value",
+                  "fill": "#2E7D32",
+                  "content": "5時間",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dAAzK",
+              "name": "card2",
+              "width": 280,
+              "height": 120,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "krjEy",
+                  "name": "card2Label",
+                  "fill": "#558B2F",
+                  "content": "がんばりポイント",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "jM38i",
+                  "name": "card2Value",
+                  "fill": "#FF9800",
+                  "content": "120 pt",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Tg8xB",
+              "name": "card3",
+              "width": 280,
+              "height": 120,
+              "fill": "#FFFFFF",
+              "cornerRadius": 16,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "i156h",
+                  "name": "card3Label",
+                  "fill": "#558B2F",
+                  "content": "れんぞく日数",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "SIE2s",
+                  "name": "card3Value",
+                  "fill": "#1976D2",
+                  "content": "7日",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Dxph7",
+          "name": "sectionTitle",
+          "fill": "#1B5E20",
+          "content": "きょうやること",
+          "fontFamily": "Inter",
+          "fontSize": 20,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "dBkVq",
+          "name": "progressRow",
+          "width": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Z7BDV",
+              "name": "subject1",
+              "width": 320,
+              "height": 100,
+              "fill": "#FFFFFF",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "um59N",
+                  "name": "sub1Name",
+                  "fill": "#333",
+                  "content": "こくご",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "2Rybm",
+                  "name": "sub1Bar",
+                  "width": "fill_container",
+                  "height": 12,
+                  "fill": "#C8E6C9",
+                  "cornerRadius": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EeZZ6",
+                      "name": "sub1Fill",
+                      "width": 240,
+                      "height": 12,
+                      "fill": "#66BB6A",
+                      "cornerRadius": 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "N8o7d",
+              "name": "subject2",
+              "width": 320,
+              "height": 100,
+              "fill": "#FFFFFF",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HmUkB",
+                  "name": "sub2Name",
+                  "fill": "#333",
+                  "content": "さんすう",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "NaKOn",
+                  "name": "sub2Bar",
+                  "width": "fill_container",
+                  "height": 12,
+                  "fill": "#C8E6C9",
+                  "cornerRadius": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "zTYqW",
+                      "name": "sub2Fill",
+                      "width": 160,
+                      "height": 12,
+                      "fill": "#66BB6A",
+                      "cornerRadius": 6
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "C9gah",
+          "name": "recentSection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "Rejzd",
+              "name": "recentTitle",
+              "fill": "#1B5E20",
+              "content": "きのうやったこと",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "KCIet",
+              "name": "recentList",
+              "width": 600,
+              "height": 120,
+              "fill": "#FFFFFF",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "By0XB",
+                  "name": "recent1",
+                  "fill": "#424242",
+                  "content": "こくご：かんじのれんしゅう",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "0RmbI",
+                  "name": "recent2",
+                  "fill": "#424242",
+                  "content": "さんすう：たしざん",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
